@@ -45,6 +45,7 @@
 
 <script>
 import { v4 as uuidv4 } from 'uuid'
+import EventService from '@/services/EventService.js'
 
 export default {
   data() {
@@ -71,10 +72,18 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      this.event.id = uuidv4()
-      this.event.organizer = this.$store.state.user
-      console.log('Event:', this.event)
+    async onSubmit() {
+      const event = {
+        ...this.event, // spread operator
+        id: uuidv4(),
+        organizer: this.$store.state.user
+      }
+      try {
+        await EventService.postEvent(event)
+        this.$store.commit('ADD_EVENT', event)
+      } catch (e) {
+        console.log(e)
+      }
     }
   }
 }
