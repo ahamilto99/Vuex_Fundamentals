@@ -20,21 +20,13 @@ export default createStore({
   actions: {
     // { commit } is the context obj
     async createEvent({ commit }, event) {
-      try {
-        await EventService.postEvent(event)
-        // we are within the store so we don't need to access it as a global object
-        commit('ADD_EVENT', event) // adds event to Vuex state (events[])
-      } catch (e) {
-        console.log(e)
-      }
+      await EventService.postEvent(event)
+      // we are within the store so we don't need to access it as a global object
+      commit('ADD_EVENT', event) // adds event to Vuex state (events[])
     },
     async fetchEvents({ commit }) {
-      try {
-        const response = await EventService.getEvents()
-        commit('SET_EVENTS', response.data)
-      } catch (e) {
-        console.log(e)
-      }
+      const response = await EventService.getEvents()
+      commit('SET_EVENTS', response.data)
     },
     async fetchEvent({ commit, state }, id) {
       const existingEvent = state.events.find(event => event.id === id)
@@ -42,12 +34,8 @@ export default createStore({
         // don't need the API call
         commit('SET_EVENT', existingEvent)
       } else {
-        try {
-          const response = await EventService.getEvent(id)
-          commit('SET_EVENT', response.data)
-        } catch (e) {
-          console.log(e)
-        }
+        const response = await EventService.getEvent(id)
+        commit('SET_EVENT', response.data)
       }
     }
   },

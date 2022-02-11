@@ -69,6 +69,16 @@
       "date": "May 24, 2022",
       "time": "1:00 pm",
       "organizer": "Adam Jahr"
+    },
+    {
+      "id": "69abcf0a-483d-4195-877f-60503960932c",
+      "category": "community",
+      "title": "Birthday",
+      "description": "It's Jonny Boy's big day!",
+      "location": "Barrhaven, ON",
+      "date": "August 31, 2022",
+      "time": "4:00 pm",
+      "organizer": "Adam Jahr"
     }
   ]
 }

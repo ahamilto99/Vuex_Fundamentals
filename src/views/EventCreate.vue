@@ -77,7 +77,13 @@ export default {
         id: uuidv4(),
         organizer: this.$store.state.user
       }
-      this.$store.dispatch('createEvent', event)
+      try {
+        await this.$store.dispatch('createEvent', event)
+        // this.$router = Vue Router
+        this.$router.push({ name: 'EventDetails', params: { id: event.id } })
+      } catch (e) {
+        this.$router.push({ name: 'ErrorDisplay', params: { error: e } })
+      }
     }
   }
 }

@@ -12,8 +12,12 @@ export default {
   components: {
     EventCard
   },
-  created() {
-    this.$store.dispatch('fetchEvents')
+  async created() {
+    try {
+      await this.$store.dispatch('fetchEvents')
+    } catch (e) {
+      this.$router.push({ name: 'ErrorDisplay', params: { error: e } })
+    }
   },
   computed: {
     events() {
