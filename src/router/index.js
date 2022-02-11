@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '../views/EventList.vue'
 import EventDetails from '../views/EventDetails.vue'
 import EventCreate from '../views/EventCreate.vue'
+import ErrorDisplay from '../views/ErrorDisplay.vue'
 import About from '../views/About.vue'
 import ErrorDisplay from '../views/ErrorDisplay.vue'
 

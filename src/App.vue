@@ -18,6 +18,7 @@
   text-align: center;
   color: #2c3e50;
 }
+
 button {
   align-items: center;
   height: 50px;
@@ -31,36 +32,44 @@ button {
   cursor: pointer;
   transition: all 0.2s linear;
 }
+
 button:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
+
 h2 {
   font-size: 40px;
   font-weight: 700;
 }
+
 h3 {
   font-size: 25px;
   font-weight: 700;
 }
+
 h4 {
   font-size: 20px;
   font-weight: 700;
 }
+
 input {
   display: block;
   width: 100%;
   height: 30px;
   margin-bottom: 24px;
 }
+
 input[type='text'] {
   padding: 0px 10px;
 }
+
 input:focus {
   border-color: #16c0b0;
   outline: 0;
 }
+
 #nav {
   padding: 30px;
 }
@@ -71,6 +80,7 @@ input:focus {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -78,6 +88,7 @@ input:focus {
   align-items: center;
   margin-bottom: 10%;
 }
+
 select:focus {
   border-color: #16c0b0;
   outline: 0;
