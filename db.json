@@ -59,6 +59,16 @@
       "date": "July 20, 2022",
       "time": "6:00 am",
       "organizer": "Adam Jahr"
+    },
+    {
+      "id": "0f348fe2-d0f0-41e8-a785-e14359f0e932",
+      "category": "food",
+      "title": "Learning Luncheon",
+      "description": "You don't make friends with salad.",
+      "location": "Barrie, ON",
+      "date": "May 24, 2022",
+      "time": "1:00 pm",
+      "organizer": "Adam Jahr"
     }
   ]
 }
