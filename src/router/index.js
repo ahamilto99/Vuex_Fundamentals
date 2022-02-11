@@ -4,6 +4,7 @@ import EventDetails from '../views/EventDetails.vue'
 import EventCreate from '../views/EventCreate.vue'
 import ErrorDisplay from '../views/ErrorDisplay.vue'
 import About from '../views/About.vue'
+import ErrorDisplay from '../views/ErrorDisplay.vue'
 
 const routes = [
   {
@@ -23,15 +24,15 @@ const routes = [
     component: EventCreate
   },
   {
-    path: '/error/:error',
-    name: 'ErrorDisplay',
-    props: true,
-    component: ErrorDisplay
-  },
-  {
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/error/:error', // :error comes from the component’s props
+    name: 'ErrorDisplay',
+    props: true,
+    component: ErrorDisplay
   }
 ]
 

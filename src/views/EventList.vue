@@ -7,20 +7,17 @@
 
 <script>
 import EventCard from '@/components/EventCard.vue'
-
 export default {
   name: 'EventList',
   components: {
     EventCard
   },
-  created() {
-    this.$store.dispatch('fetchEvents')
-    .catch(error => {
-      this.$router.push({
-        name: 'ErrorDisplay',
-        params: { error: error }
-      })
-    })
+  async created() {
+    try {
+      await this.$store.dispatch('fetchEvents')
+    } catch (e) {
+      this.$router.push({ name: 'ErrorDisplay', params: { error: e } })
+    }
   },
   computed: {
     events() {

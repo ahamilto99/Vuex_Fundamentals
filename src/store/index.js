@@ -1,11 +1,11 @@
 import { createStore } from 'vuex'
-import EventService from '@/services/EventService'
+import EventService from '@/services/EventService.js'
+
 
 export default createStore({
   state: {
     user: 'Adam Jahr',
-    events: [],
-    event: null
+    events: []
   },
   mutations: {
     ADD_EVENT(state, event) {
@@ -19,38 +19,26 @@ export default createStore({
     }
   },
   actions: {
-    createEvent({ commit }, event) {
-      return EventService.postEvent(event)
-        .then(() => {
-          commit('ADD_EVENT', event)
-          commit('SET_EVENT', event)
-        })
-        .catch(error => {
-          throw error
-        })
+    // { commit } is the context obj
+    async createEvent({ commit }, event) {
+      await EventService.postEvent(event)
+      // we are within the store so we don't need to access it as a global object
+      commit('ADD_EVENT', event) // adds event to Vuex state (events[])
     },
-    fetchEvents({ commit }) {
-      return EventService.getEvents()
-        .then(response => {
-          commit('SET_EVENTS', response.data)
-        })
-        .catch(error => {
-          throw error
-        })
+    async fetchEvents({ commit }) {
+      const response = await EventService.getEvents()
+      commit('SET_EVENTS', response.data)
     },
-    fetchEvent({ commit }, id) {  
-      const event = state.events.find(event => event.id === id)
-      if (event) {
-        commit('SET_EVENT', event)
+    async fetchEvent({ commit, state }, id) {
+      const existingEvent = state.events.find(event => event.id === id)
+      if (existingEvent) {
+        // don't need the API call
+        commit('SET_EVENT', existingEvent)
       } else {
-        return EventService.getEvent(id)
-          .then(response => {
-            commit('SET_EVENT', response.data)
-          })
-          .catch(error => {
-            throw error
-          })
+        const response = await EventService.getEvent(id)
+        commit('SET_EVENT', response.data)
       }
     }
-  }
+  },
+  modules: {}
 })

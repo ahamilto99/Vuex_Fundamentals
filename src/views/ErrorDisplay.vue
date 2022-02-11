@@ -1,5 +1,5 @@
 <template>
-  <h4>Oops! There was an error:</h4>
+  <h4>Oops! Something went wrong.</h4>
   <p>{{ error }}</p>
 </template>
 
