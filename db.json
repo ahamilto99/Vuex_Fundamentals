@@ -59,6 +59,16 @@
       "date": "October 7, 2022",
       "time": "8:30 am",
       "organizer": "Adam Jahr"
+    },
+    {
+      "id": "ce8aae72-1bbe-4b76-85a6-b2d6fb0bad9b",
+      "category": "education",
+      "title": "High School Reunion",
+      "description": "Bring your books and pencils.",
+      "location": "Manotick, ON",
+      "date": "June 6, 2022",
+      "time": "7:00 pm",
+      "organizer": "Alex Hamilton"
     }
   ]
 }

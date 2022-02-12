@@ -74,12 +74,12 @@ export default {
     ...mapState(['user'])
   },
   methods: {
-    ...mapActions(['createEvent']),
+    ...mapActions('event', ['createEvent']), // event is the dispatching module
     async onSubmit() {
       const event = {
         ...this.event, // spread operator
         id: uuidv4(),
-        organizer: this.user
+        organizer: this.user.userInfo.name
       }
       try {
         await this.createEvent(event)
