@@ -29,6 +29,36 @@
       "date": "July 22, 2022",
       "time": "11:00",
       "organizer": "Carey Wales"
+    },
+    {
+      "id": "b44862ad-e6a2-452c-b30e-422c8b86053b",
+      "category": "nature",
+      "title": "Garden Time",
+      "description": "It's going to get dirty.",
+      "location": "Ottawa, ON",
+      "date": "April 1, 2022",
+      "time": "12:00 pm",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "de2ffbc2-9dda-4e6a-a267-7ac2fd28ed18",
+      "category": "animal welfare",
+      "title": "Puppy Day",
+      "description": "Come pet some puppies.",
+      "location": "Toronto, ON",
+      "date": "July 15, 2022",
+      "time": "11:30 am",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "8845e221-a21d-4a66-97f9-04efeb7969f4",
+      "category": "community",
+      "title": "Canned Food Drive",
+      "description": "Roll up your sleeves! It's that time of year!",
+      "location": "Manotick, ON",
+      "date": "October 7, 2022",
+      "time": "8:30 am",
+      "organizer": "Adam Jahr"
     }
   ]
 }
