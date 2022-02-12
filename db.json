@@ -31,54 +31,44 @@
       "organizer": "Carey Wales"
     },
     {
-      "id": "788d0578-6d12-41a4-b48e-d02e3d2905db",
-      "category": "sustainability",
-      "title": "Tree Huggers",
-      "description": "Planting a lot of trees.",
-      "location": "Montreal, QC",
-      "date": "April 21, 2022",
+      "id": "b44862ad-e6a2-452c-b30e-422c8b86053b",
+      "category": "nature",
+      "title": "Garden Time",
+      "description": "It's going to get dirty.",
+      "location": "Ottawa, ON",
+      "date": "April 1, 2022",
+      "time": "12:00 pm",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "de2ffbc2-9dda-4e6a-a267-7ac2fd28ed18",
+      "category": "animal welfare",
+      "title": "Puppy Day",
+      "description": "Come pet some puppies.",
+      "location": "Toronto, ON",
+      "date": "July 15, 2022",
+      "time": "11:30 am",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "8845e221-a21d-4a66-97f9-04efeb7969f4",
+      "category": "community",
+      "title": "Canned Food Drive",
+      "description": "Roll up your sleeves! It's that time of year!",
+      "location": "Manotick, ON",
+      "date": "October 7, 2022",
       "time": "8:30 am",
       "organizer": "Adam Jahr"
     },
     {
-      "id": "d83035f6-87e1-48d5-8bfb-c2eda71e2193",
-      "category": "community",
-      "title": "Canned Food Drive",
-      "description": "Heavy lifting is required.",
+      "id": "ce8aae72-1bbe-4b76-85a6-b2d6fb0bad9b",
+      "category": "education",
+      "title": "High School Reunion",
+      "description": "Bring your books and pencils.",
       "location": "Manotick, ON",
-      "date": "May 24, 2022",
-      "time": "2:30 pm",
-      "organizer": "Adam Jahr"
-    },
-    {
-      "id": "11b4fd22-7dae-4b10-8d7c-1f44186174a6",
-      "category": "housing",
-      "title": "Renovations",
-      "description": "Bring your drills and hammers.",
-      "location": "Burnaby, BC",
-      "date": "July 20, 2022",
-      "time": "6:00 am",
-      "organizer": "Adam Jahr"
-    },
-    {
-      "id": "0f348fe2-d0f0-41e8-a785-e14359f0e932",
-      "category": "food",
-      "title": "Learning Luncheon",
-      "description": "You don't make friends with salad.",
-      "location": "Barrie, ON",
-      "date": "May 24, 2022",
-      "time": "1:00 pm",
-      "organizer": "Adam Jahr"
-    },
-    {
-      "id": "69abcf0a-483d-4195-877f-60503960932c",
-      "category": "community",
-      "title": "Birthday",
-      "description": "It's Jonny Boy's big day!",
-      "location": "Barrhaven, ON",
-      "date": "August 31, 2022",
-      "time": "4:00 pm",
-      "organizer": "Adam Jahr"
+      "date": "June 6, 2022",
+      "time": "7:00 pm",
+      "organizer": "Alex Hamilton"
     }
   ]
 }

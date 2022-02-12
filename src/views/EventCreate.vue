@@ -45,6 +45,7 @@
 
 <script>
 import { v4 as uuidv4 } from 'uuid'
+import { mapState, mapActions } from 'vuex'
 export default {
   data() {
     return {
@@ -69,15 +70,19 @@ export default {
       }
     }
   },
+  computed: {
+    ...mapState(['user'])
+  },
   methods: {
+    ...mapActions('event', ['createEvent']), // event is the dispatching module
     async onSubmit() {
       const event = {
         ...this.event, // spread operator
         id: uuidv4(),
-        organizer: this.$store.state.user
+        organizer: this.user.userInfo.name
       }
       try {
-        await this.$store.dispatch('createEvent', event)
+        await this.createEvent(event)
         // this.$router = Vue Router
         this.$router.push({ name: 'EventDetails', params: { id: event.id } })
       } catch (e) {
