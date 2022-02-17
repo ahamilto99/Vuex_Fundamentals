@@ -6,6 +6,7 @@
       :to="{ name: 'EventDetails', params: { id: event.id } }"
       v-for="event in events"
       :key="event.id"
+      data-testid="event"
     >
       <EventCard :event="event" />
     </router-link>
